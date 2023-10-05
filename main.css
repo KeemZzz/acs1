@@ -1,0 +1,35 @@
+/* This is the body selector
+setting the background-color property to the value of light blue
+setting the text color to black!*/
+body{
+    background-color: lightblue;
+    color: black;
+}
+/* this is the nav selector anything in between the <nav> and the </nav> tags will be affected by
+these styles */
+nav{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+/*
+this is footer selector - generally the footer will be at the bottom of the page
+*/
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+/* the img with an id of the meme will be affected by this style */
+#meme{
+    margin-right: 200px;
+
+}
+
+/* anything in between the header tags will be affected by this style */
+
+header{
+    text-align: center;
+}
