@@ -1,5 +1,5 @@
 //How to start game
-function startGame(){
+function playCraps(){
     console.log("startGame function called");
 
     //first dice roll
@@ -13,10 +13,10 @@ function startGame(){
     console.log("The sum of the die is:" + sum);
 
     //shows first dice total to player
-    outputRes("Dice1Res", "Dice 1 is:" + dice1);
+    outputRes("Die1Res", "Dice 1 is:" + dice1);
 
     //shows second dice total to player
-    outputRes("Dice2Res", "Dice 2 is:" + dice2);
+    outputRes("Die2Res", "Dice 2 is:" + dice2);
 
     //show overall total
     outputRes("sumRes", "The total is:" + sum);
