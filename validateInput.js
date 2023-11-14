@@ -1,3 +1,12 @@
+function charAtDemo() {
+    var myText = "Comm,Separated,Values";
+    var indexOfFirstComma = myText.indexOf(",");
+    console.log(indexOfFirstComma);
+    //document.getElementById("charAt").innerHTML = sum;
+}
+
+
+
 function validateInput(event){
     event.preventDefault();
     let firstName = document.getElementById("fname").value;
