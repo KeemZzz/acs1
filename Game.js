@@ -1,44 +1,27 @@
-//How to start game
-function playCraps(){
-    console.log("startGame function called");
-
-    //first dice roll
-    var dice1 = rollDice();
-    console.log("The first dice landed on:" + dice1);
-    //second dice roll 
-    var dice2 = rollDice();
-    console.log("The second dice landed on:" + dice2);
-    //die total
-    var sum = dice1 + dice2; 
-    console.log("The sum of the die is:" + sum);
-
-    //shows first dice total to player
-    outputRes("Die1Res", "Dice 1 is:" + dice1);
-
-    //shows second dice total to player
-    outputRes("Die2Res", "Dice 2 is:" + dice2);
-
-    //show overall total
-    outputRes("sumRes", "The total is:" + sum);
-
-    //win/lose/tie var
-    if (sum == 7 || sum == 11){
-        outputRes("sumRes", "Loser!!!");
-    }
-    //if dice are the same and even
-    else if (dice1 == dice2 && dice2 % 2 == 0){
-        outputRes("sumRes", "How lucky! You win!");
-    }
-    //if neither occurs
-    else {
-        outputRes("sumRes", "You Pushed");
-    }
+function rollDice() {
+    return Math.floor(Math.random() * 6) + 1;
 }
 
-//Craps results
-function outputRes(htmlElement, theText){
-    //using html element shows results
-    document.getElementById(htmlElement).innerHTML = theText;
+function playCraps() {
+    const dice1 = rollDice();
+    const dice2 = rollDice();
+    const sum = dice1 + dice2;
+
+    const resultElement = document.getElementById('results');
+    resultElement.innerHTML = `
+        <p>The first dice landed on: ${dice1}</p>
+        <p>The second dice landed on: ${dice2}</p>
+        <p>The sum of the dice is: ${sum}</p>
+    `;
+
+    if (sum === 7 || sum === 11) {
+        resultElement.innerHTML += "<p>Loser!!!</p>";
+    } else if (dice1 === dice2 && dice2 % 2 === 0) {
+        resultElement.innerHTML += "<p>How lucky! You win!</p>";
+    } else {
+        resultElement.innerHTML += "<p>You Pushed</p>";
+    }
+}
 }
 //1-6 rng
 function rollDice(){
