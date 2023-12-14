@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play Sound on Page Load</title>
+</head>
+<body>
+
+<button onclick="toggleSound()">Toggle Sound</button>
+
+<script>
+  var audio = new Audio('ambient-piano-logo-165357.mp3');
+  var isPlaying = false;
+
+  function playSound() {
+    audio.play();
+    isPlaying = true;
+  }
+
+  function pauseSound() {
+    audio.pause();
+    audio.currentTime = 0; // Resets the sound to the beginning
+    isPlaying = false;
+  }
+
+  function toggleSound() {
+    if (isPlaying) {
+      pauseSound();
+    } else {
+      playSound();
+    }
+  }
+
+  window.onload = playSound;
+</script>
+
+</body>
+</html>
