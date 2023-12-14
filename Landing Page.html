@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-            <!--Links JS File-->
-<script src="Sound.js"></script>
-<!--How to link to CSS file-->
-<link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     <header>
         <h1>
-        Welcome to my page!
+            Welcome to my page!
         </h1>
     </header>
     <nav>
@@ -28,15 +25,24 @@
             Table</a><br>
         <a href="./sound.html">
             Sound</a><br>
-        </nav>
+    </nav>
+    <footer>
+        Joaquin Carter<br>
+        University of Advancing Technology<br>
+        2625 W Baseline Rd<br>
+        Tempe, AZ 85283<br>
+        The more you know, the more you don't know<br>
+        You'll love it here!!<br>
+    </footer>
 
-        <footer>
-            Joaquin Carter<br>
-            University of Advancing Technology<br>
-            2625 W Baseline Rd<br>
-            Tempe, AZ 85283<br>
-            The more you know, the more you don't know<br>
-            You'll love it here!!<br>
-        </footer>
+    <button onclick="playSound()">Play Sound</button>
+
+    <script>
+        var audio = new Audio('ambient-piano-logo-165357.mp3');
+
+        function playSound() {
+            audio.play();
+        }
+    </script>
 </body>
 </html>
