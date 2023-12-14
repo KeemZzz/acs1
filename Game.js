@@ -22,11 +22,3 @@ function playCraps() {
         resultElement.innerHTML += "<p>You Pushed</p>";
     }
 }
-}
-//1-6 rng
-function rollDice(){
-    //get a number between 0 & 1, multiply it by 6
-    var dice = 6 * Math.random();
-    //return whole number value
-    return Math.ceil(dice);
-}
